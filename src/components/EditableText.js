@@ -29,7 +29,6 @@ import '../styles/EditableText.css'
      }
    }
 
-
   render(){
     if(this.state.isActive){
       return (

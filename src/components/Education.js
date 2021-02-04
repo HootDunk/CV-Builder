@@ -3,6 +3,7 @@ import '../styles/Education.css'
 import SchoolInfo from "./SchoolInfo"
 import EducationForm from "./EducationForm"
 import uniqid from 'uniqid'
+import EditEducation from "./EditEducation"
 
 class Education extends React.Component {
   constructor(){
@@ -65,10 +66,24 @@ class Education extends React.Component {
     this.setState({
       degrees: newArray,
     })
-    
-    // problem, we need a form with the state. not props.
-    // I think we can re-use the education component if we make change/submit handles that are specific to the degrees array state.
-    // will pass in different functions but can keep the props the same
+  }
+
+  updateObject = (event, id, school, yearBegan, yearEnd, degreeTitle, gpa) => {
+    event.preventDefault();
+    const index = this.state.degrees.findIndex(element => element.id === id)
+    let newArray = [...this.state.degrees]
+    newArray[index] = {
+      ...newArray[index],
+      activeEdit: !newArray[index].activeEdit,
+      school: school,
+      yearBegan: yearBegan,
+      yearEnd: yearEnd,
+      degreeTitle: degreeTitle,
+      gpa: gpa
+    }
+      this.setState({
+        degrees: newArray,
+      })
   }
 
   // change this to ToggleActive and use it for the close button in the form
@@ -76,26 +91,44 @@ class Education extends React.Component {
     this.setState({ formIsActive: !this.state.formIsActive })
   }
 
-
+  /* Why reference state in EditEducation? 
+    it was originally going to be a controlled form. 
+    It shouldn't make a difference either way so I'm leaving it in case I change my mind.*/
   render() {
     return (
       <div>
         <h3>Education</h3>
-        {this.state.degrees.map((item) => {
-          return(
-            <SchoolInfo
-              handleDelete={this.handleDelete}
-              editSchool={this.toggleObject}
-              key={item.id}
-              id={item.id}
-              school={item.school}
-              yearBegan={item.yearBegan}
-              yearEnd={item.yearEnd}
-              degreeTitle={item.degreeTitle}
-              gpa={item.gpa}
-              activeEdit={item.activeEdit}
+        {this.state.degrees.map((item, index) => {
+          if(item.activeEdit){
+            return (
+              <EditEducation 
+              updateObject={this.updateObject}
+              toggleForm={this.toggleObject}
+              key={this.state.degrees[index].id}
+              id={this.state.degrees[index].id}
+              school={this.state.degrees[index].school}
+              yearBegan={this.state.degrees[index].yearBegan}
+              yearEnd={this.state.degrees[index].yearEnd}
+              degreeTitle={this.state.degrees[index].degreeTitle}
+              gpa={this.state.degrees[index].gpa}
             />
-          )
+            )
+          } else {
+            return(
+              <SchoolInfo
+                handleDelete={this.handleDelete}
+                editSchool={this.toggleObject}
+                key={item.id}
+                id={item.id}
+                school={item.school}
+                yearBegan={item.yearBegan}
+                yearEnd={item.yearEnd}
+                degreeTitle={item.degreeTitle}
+                gpa={item.gpa}
+                activeEdit={item.activeEdit}
+              />
+            )
+          }
         })}
 
         <EducationForm 
@@ -118,11 +151,6 @@ class Education extends React.Component {
 
 export default Education
 
-
-// clicking edit on the component will cause the form to render with the matching state pre filled?
-// clicking edit calls function in Education.js that finds the state object index and then renders it with the form??
-// I think each object will need a keyValue like isEditing and this is what gets changed when edit is clicked. School-Info will
-// conditionally render a prefilled form to make edits from?
 
 
 

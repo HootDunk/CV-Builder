@@ -2,9 +2,6 @@ import React from 'react';
 import "../styles/SchoolInfo.css"
 
 function SchoolInfo(props){
-  if(props.activeEdit){
-    return <h1>Edit me</h1>
-  } else {
     return (
       <div className="school-info">
         <div className="school">
@@ -19,10 +16,9 @@ function SchoolInfo(props){
           <button onClick={() => props.editSchool(props.id)}>Edit</button>
           <button onClick={() => props.handleDelete(props.id)}>Delete</button>
         </div>
-  
       </div>
     )
-  }
+  
 
 }
 
