@@ -1,0 +1,45 @@
+p input {
+  border: none;
+  display: inline;
+  font-family: inherit;
+  font-size: inherit;
+  padding: none;
+  width: auto;
+}
+
+p {
+  font-size: 20px;
+  margin: 0;
+}
+
+input {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  /* outline: auto; */
+}
+
+
+.main-text {
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.base-text {
+  font-size: 20px;
+}
+
+input.main-text {
+  max-width: 200px;
+}
+
+input.base-text-right {
+  max-width: 130px;
+  /* text-align: right;  */
+}
+
+/* p.base-text-right {
+  
+  word-wrap: break-word
+} */

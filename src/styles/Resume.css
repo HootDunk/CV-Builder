@@ -1,0 +1,9 @@
+
+div.resume-body{
+  outline: 2px;
+  outline-style: auto;
+  max-width: 70%;
+  min-width: 500px;
+  margin: 0 auto;
+  padding: 5px;
+}
