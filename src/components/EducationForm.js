@@ -47,7 +47,6 @@ function EducationForm(props){
           <br />
           <input
             onChange={props.handleChange}
-            required
             type="text"
             value={props.gpa}
             name="gpa"
@@ -55,7 +54,10 @@ function EducationForm(props){
           />
         </div>
         <div className="button-div">
-          <button type="button">Close</button>
+          <button
+            onClick={props.toggleForm}
+            type="button">Close
+          </button>
           <button>Submit</button>
         </div>
 
@@ -64,7 +66,7 @@ function EducationForm(props){
     )
   } else {
     return (
-      <button onClick={props.setFormToActive}>plus</button>
+      <button onClick={props.toggleForm}>plus</button>
       )
   }
 
