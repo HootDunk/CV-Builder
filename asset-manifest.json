@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/CV-Builder/static/css/main.684c03d5.chunk.css",
+    "main.js": "/CV-Builder/static/js/main.08662c97.chunk.js",
+    "main.js.map": "/CV-Builder/static/js/main.08662c97.chunk.js.map",
+    "runtime-main.js": "/CV-Builder/static/js/runtime-main.90d9e09d.js",
+    "runtime-main.js.map": "/CV-Builder/static/js/runtime-main.90d9e09d.js.map",
+    "static/css/2.c65f1679.chunk.css": "/CV-Builder/static/css/2.c65f1679.chunk.css",
+    "static/js/2.2ad7af6b.chunk.js": "/CV-Builder/static/js/2.2ad7af6b.chunk.js",
+    "static/js/2.2ad7af6b.chunk.js.map": "/CV-Builder/static/js/2.2ad7af6b.chunk.js.map",
+    "index.html": "/CV-Builder/index.html",
+    "static/css/2.c65f1679.chunk.css.map": "/CV-Builder/static/css/2.c65f1679.chunk.css.map",
+    "static/css/main.684c03d5.chunk.css.map": "/CV-Builder/static/css/main.684c03d5.chunk.css.map",
+    "static/js/2.2ad7af6b.chunk.js.LICENSE.txt": "/CV-Builder/static/js/2.2ad7af6b.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.min.css": "/CV-Builder/static/media/fontawesome-webfont.f691f37e.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.90d9e09d.js",
+    "static/css/2.c65f1679.chunk.css",
+    "static/js/2.2ad7af6b.chunk.js",
+    "static/css/main.684c03d5.chunk.css",
+    "static/js/main.08662c97.chunk.js"
+  ]
+}
