@@ -1,4 +1,4 @@
-# CV Builder
+# CV Builder [Live](https://hootdunk.github.io/CV-Builder/)
 
 My first React app.  I'd wanted to get away from using pop-up modals to get user input and instead have input fields that fit the app more intuitively.  React actually made this a lot simpler than I expected with conditional rendering based on components state. I’m really looking forward to using it on more projects. 
 
