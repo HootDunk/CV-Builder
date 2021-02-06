@@ -1,0 +1,23 @@
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+p.skill-card {
+  display: inline;
+}
+
+div.skills-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+form.skills {
+  margin-left: 1.5rem;
+}
+
+h3.skills {
+  margin-bottom: 0;
+}

@@ -19,7 +19,6 @@ class Education extends React.Component {
     }
   }
 
-
   handleChange = (event) => {
     const {name, value} = event.target;
     this.setState({ [name]: value })
@@ -86,7 +85,7 @@ class Education extends React.Component {
       })
   }
 
-  // change this to ToggleActive and use it for the close button in the form
+
   toggleForm = () => {
     this.setState({ formIsActive: !this.state.formIsActive })
   }

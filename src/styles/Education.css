@@ -16,6 +16,8 @@ h3 {
 form.school-info {
   display: flex;
   justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto 15px auto;
   padding-left: 10px;
   width: 95%;
@@ -29,4 +31,5 @@ form.school-info {
 
 div.button-div {
   width: 10%;
+
 }
