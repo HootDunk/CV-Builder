@@ -13,8 +13,8 @@ function SchoolInfo(props){
           <p>{props.gpa}</p>
         </div>
         <div className="button-div">
-          <button onClick={() => props.editSchool(props.id)}>Edit</button>
-          <button onClick={() => props.handleDelete(props.id)}>Delete</button>
+          <i onClick={() => props.editSchool(props.id)} className="fas fa-edit"></i>
+          <i className="fas fa-trash" onClick={() => props.handleDelete(props.id)}></i>
         </div>
       </div>
     )

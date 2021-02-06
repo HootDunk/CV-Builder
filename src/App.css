@@ -1,5 +1,23 @@
-/* .App {
-  text-align: center;
-} */
 
+i {
+  margin: 5px;
+  cursor: pointer;
+  font-size: 19px;
+}
 
+i.fas.fa-file-signature {
+  display: inline;
+  font-size: 40px;
+  margin-left: 10px;
+}
+
+div.header {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+button {
+  display: none;
+}

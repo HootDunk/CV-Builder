@@ -13,8 +13,8 @@ function WorkInfo(props) {
         <p className="sub-text">{props.description}</p>
       </div>
       <div className="button-div">
-          <button onClick={() => props.editExperience(props.id)}>Edit</button>
-          <button onClick={() => props.handleDelete(props.id)}>Delete</button>
+          <i onClick={() => props.editExperience(props.id)} className="fas fa-edit"></i>
+          <i onClick={() => props.handleDelete(props.id)} className="fas fa-trash"></i>
         </div>
     </div>
   )

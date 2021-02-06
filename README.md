@@ -1,70 +1,14 @@
-# Getting Started with Create React App
+# CV Builder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My first React.  I'd wanted to get away from using pop-up modals to get user input and instead have input fields that fit the app more intuitively.  React actually made this a lot simpler than I expected with conditional rendering based on components state. I’m really looking forward to using it on more projects. 
 
-## Available Scripts
+I tried out a few different implementations with each section of the resume.  The first section is made up of individual components.  Each component has its own state and is passed an initial value and class prop.  Conditional rendering handles the display.  If state.text is a blank string, then the initial value prop is rendered. If a user inputs a value then the state changes and state.text will be rendered instead of the initial value prop.
 
-In the project directory, you can run:
+In the Education section, state is lifted up to the Education component.  This components holds an array of objects where each object maintains the education data for each entry. This way the number of entries is dynamic and supports any number of inputs from the education field.  The form component to edit an object in the Education array is implemented as an uncontrolled form.  I wanted to try an uncontrolled form as it seemed somewhat costly to iterate over the array and replace the matching objects fields for each key press.  For this project it wasn’t really necessary as the number of objects would always be small but for the future I figured it would be nice to know.
 
-### `yarn start`
+The Experience section is very similar to the Education section, however editing an object in the Experience component's state array is done so in a controlled way, with each change triggering an update of the state.  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+I used this resource to get the basics of React down and really enjoyed it -> https://scrimba.com/learn/learnreact
+If you’ve never used Scrimba it’s worth checking out just to try out their “interactive screencast” technology. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

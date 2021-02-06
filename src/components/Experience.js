@@ -10,19 +10,8 @@ class Experience extends React.Component{
   constructor() {
     super()
     this.state = {
-      jobs: [
-        {
-          id: "ksldjf;ldks",
-          company: "Mutual of Omaha",
-          yearBegan: "2017",
-          yearEnd: "2018",
-          location: "Saint Louis",
-          description: "Pretty much did nothing.  learned some python which was cool.",
-          title: "Finance Intern",
-          activeEdit: false,
-        }
-      ],
-      formIsActive: true,
+      jobs: [],
+      formIsActive: false,
       company: "",
       location: "",
       yearBegan: "",
@@ -105,7 +94,6 @@ class Experience extends React.Component{
   // not sure if I can use the state from the item method or not.
   // 
   render() {
-    console.log(this.state)
     return (
       <div>
         <h3>Work Experience</h3>

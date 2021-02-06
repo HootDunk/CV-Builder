@@ -74,9 +74,15 @@ class EditEducation extends React.Component{
             />
           </div>
           <div className="button-div">
-  
-            <button onClick={() => this.props.toggleForm(this.props.id)} type="button">Close</button>
-            <button>Submit</button>
+            <i 
+            onClick={() => this.props.toggleForm(this.props.id)}
+            type="button" 
+            className="fas fa-times"
+          ></i>
+            <label>
+              <button></button>
+              <i className="fas fa-check-square"></i>
+            </label>
           </div>
   
         </form>

@@ -64,12 +64,15 @@ function ExperienceForm(props){
         </div>
 
         <div className="button-div">
-          <button 
+          <i 
             onClick={(props.id)? () => props.toggleForm(props.id) : props.toggleForm}
-            type="button"
-          > Close
-          </button>
-          <button>Submit</button>
+            type="button" 
+            className="fas fa-times"
+          ></i>
+          <label>
+            <button></button>
+            <i className="fas fa-check-square"></i>
+          </label>
         </div>
         
       </form>
@@ -79,7 +82,7 @@ function ExperienceForm(props){
     )
   } else {
     return (
-      <button onClick={props.toggleForm}>plus</button>
+      <i onClick={props.toggleForm} className="fas fa-plus-circle"></i>
       )
   }
 

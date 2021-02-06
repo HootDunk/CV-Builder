@@ -6,6 +6,21 @@ div.resume-body{
   min-width: 500px;
   margin: 0 auto;
   padding: 5px;
+
+  box-shadow: 8px 6px 10px 0px rgb(50 50 50 / 75%);
+  box-shadow: 0 0 25px #000;
+
+  border-radius: 10px;
+  outline: none;
+  background: white;
+  padding: 1rem;
+}
+
+hr {
+  margin-block-start: 0.7em;
+  margin-block-end: 0.7em;
+  border-width: 2px;
+  border-style:inset;
 }
 
 .sub-text {

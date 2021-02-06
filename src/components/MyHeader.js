@@ -1,8 +1,17 @@
 import React from 'react';
 
 function MyHeader(){
+
+
+
   return (
-  <h1>My Header</h1>
+    <div className="header">
+      
+      {/* <i className="fas fa-window-close"></i> */}
+      <h1>CV Builder</h1>
+      <i className="fas fa-file-signature"></i>
+    </div>
+  
   )
 }
 

@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 function EducationForm(props){
   if (props.isActive){
     return (
@@ -54,11 +55,16 @@ function EducationForm(props){
           />
         </div>
         <div className="button-div">
-          <button
+          <i 
             onClick={props.toggleForm}
-            type="button">Close
-          </button>
-          <button>Submit</button>
+            type="button" 
+            className="fas fa-times"
+          ></i>
+          <label>
+            <button></button>
+            <i type="button" className="fas fa-check-square"></i>
+          </label>
+         
         </div>
 
       </form>
@@ -66,7 +72,7 @@ function EducationForm(props){
     )
   } else {
     return (
-      <button onClick={props.toggleForm}>plus</button>
+      <i onClick={props.toggleForm} className="fas fa-plus-circle"></i>
       )
   }
 

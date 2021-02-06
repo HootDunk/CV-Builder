@@ -1,10 +1,20 @@
 .skills-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
 }
 
-p.skill-card {
+div.skill-card {
+  margin: 10px 30px 10px 30px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  background: rgba(97, 106, 107, 0.5);
+  border-radius: 10px;
+}
+
+p.skill-element {
   display: inline;
 }
 

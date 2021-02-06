@@ -10,7 +10,7 @@ class Education extends React.Component {
     super()
     this.state = {
       degrees: [],
-      formIsActive: true,
+      formIsActive: false,
       school: "",
       yearBegan: "",
       yearEnd: "",
