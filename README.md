@@ -1,6 +1,8 @@
 # CV Builder - [Live](https://hootdunk.github.io/CV-Builder/)
 
-My first React app.  I'd wanted to get away from using pop-up modals to get user input and instead have input fields that fit the app more intuitively.  React actually made this a lot simpler than I expected with conditional rendering based on components state. I’m really looking forward to using it on more projects. 
+\*After finishing this project, I learned about React Hooks and re-wrote the class based components as stateful functional components.  The refactored version can be found [here](https://github.com/HootDunk/CV-Builder-Hooks).  Once I got the hang of the syntax I found that I enjoyed the logical separation that the useState hook provides over the single state object found in class based components.
+
+My first React app.  I'd wanted to get away from using pop-up modals to get user input and instead collect user input in a more intuitive way.  React actually made this a lot simpler than I expected with conditional rendering based on props/state. I’m really looking forward to using it on more projects. 
 
 I tried out a few different implementations with each section of the resume.  The first section is made up of individual components.  Each component has its own state and is passed an initial value and class prop.  Conditional rendering handles the display.  If state.text is a blank string, then the initial value prop is rendered. If a user inputs a value then the state changes and state.text will be rendered instead of the initial value prop.
 
